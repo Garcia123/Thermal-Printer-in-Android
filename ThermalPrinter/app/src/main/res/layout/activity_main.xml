@@ -80,15 +80,5 @@
             android:layout_centerHorizontal="true"
             android:text="Buy me a Coffee" />
     </LinearLayout>
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/view_admob"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:visibility="invisible"
-        android:layout_below="@+id/layout_content"
-        android:background="#FFF"
-        ads:adUnitId="@string/admob_list_banner"
-        ads:adSize="LARGE_BANNER"/>
+
 </RelativeLayout>

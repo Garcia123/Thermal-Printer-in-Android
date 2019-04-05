@@ -16,22 +16,17 @@ import java.util.Calendar;
 
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends Activity{
     private String TAG = "Main Activity";
     EditText message;
     Button btnPrint, btnBill, btnDonate;
-    AdView viewAdmob;
 
     byte FONT_TYPE;
     private static BluetoothSocket btsocket;
@@ -45,7 +40,6 @@ public class MainActivity extends Activity{
         btnPrint = (Button)findViewById(R.id.btnPrint);
         btnBill = (Button)findViewById(R.id.btnBill);
         btnDonate = (Button)findViewById(R.id.btnDonate);
-        viewAdmob = (AdView)findViewById(R.id.view_admob);
 
         btnPrint.setOnClickListener(new OnClickListener() {
 
@@ -68,10 +62,10 @@ public class MainActivity extends Activity{
             }
         });
 
-        initAdMob();
+        //initAdMob();
     }
 
-    private void initAdMob() {
+    /*private void initAdMob() {
         final AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 //.addTestDevice("F901B815E265F8281206A2CC49D4E432")
@@ -97,7 +91,7 @@ public class MainActivity extends Activity{
                     }
                 });
         viewAdmob.loadAd(adRequest);
-    }
+    }*/
 
     protected void printBill() {
         if(btsocket == null){
